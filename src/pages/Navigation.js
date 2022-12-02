@@ -13,7 +13,7 @@ const Navigation = (  ) => {
             
       </header>
         <ul>
-          <li>
+          <li>  
             <Link 
             
             style={{textDecoration: 'none', color: 'inherit'}}
