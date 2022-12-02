@@ -1,45 +1,7 @@
-.App {
-  text-align: center;
-}
-
-.group-8{
-  position: absolute;
-width: 1177px;
-height: 631px;
-left: 260px;
-top: 233px;
-
-}
-
-.heading{
-  font-family: 'Poppins', sans-serif;
-font-style: normal;
-font-weight: 400;
-font-size: 64px;
-line-height: 77px;
-margin-bottom: 25px;
-color: #FFFFFF;
-
-}
-
-.group-7{
-  /* position: relative; */
-width: 1177px;
-height: 387px;
-left: 260px;
-top: 357px;
-}
-
-#inputs{
-  height: 46.008544921875px;
-width: 1177px;
-margin: 10px;
-}
-
-#btn{
-  height: 58px;
-width: 226px;
-
-border-radius: 0px;
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
 }

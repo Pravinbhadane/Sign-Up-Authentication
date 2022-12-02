@@ -1,17 +1,52 @@
 import './App.css';
-import Navbar from './Components/Navcomp';
-import {Route, Routes} from 'react-router-dom'
-import Home from './Components/Home';
-import Profile from './Components/Profile';
+import { Routes, Route } from "react-router-dom";
+import {
+  useState,
+  // useEffect
+} from 'react';
+
+import Navigation from "./pages/Navigation"
+
+import Signup from "./pages/Signup";
+import Profile from "./pages/Profile";
 function App() {
+  const [submitall, setsubmitall] = useState(false)
+  const [success, setSuccess] = useState(false)
+  const [userDetails, setuserDetails] = useState({
+    fullName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+
+  })
+
+
+
+
+
   return (
-    <div className="bg-black h-screen w-screen  text-slate-200">
-      <Navbar />
+    <>
+      <Navigation />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/profile' element={<Profile />} />
+
+        <Route index element={<Signup
+          setuserDetails={setuserDetails}
+          userDetails={userDetails}
+          setsubmitall={setsubmitall}
+          submitall={submitall}
+          setSuccess={setSuccess}
+          success={success}
+        />} />
+        <Route path="/profile" element={<Profile
+          setSuccess={setSuccess}
+          success={success}
+        />} />
+
+
+
       </Routes>
-    </div>
+    </>
+
   );
 }
 
